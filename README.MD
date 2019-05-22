@@ -4,4 +4,4 @@ This repository is for maintaining the mod Spy Promotion Tree.
 
 You can [subscribe/download the mod from Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=1746994170).
 
-For balancing discussion, please check issue #1.
+For balancing discussion, please check [issue #1](https://github.com/datvm/Civ6SpyPromotionTree/issues/1).
