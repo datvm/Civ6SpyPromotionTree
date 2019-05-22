@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mod id="7fd55004-6f24-4e96-bf17-c5b0977602d6" version="1.0">
+  <Properties>
+    <Name>Spy Promotion Tree</Name>
+    <Description><![CDATA[Spies now have promotion tree instead of picking from random promotions. Spies can now have 7 levels (6 promotions) instead of 4. The promotions are (please check screenshot for details):
+
+[list]
+[*] Counter Intelligence: Seduction + Polygraph + Surveillance.
+[*] Master Mischief: Demolitions + Smear Campaign + Satchel Charges.
+[*] Secretive Leader (requires Counter Intelligence): Quarter Master + Guerilla Leader + Covert Action.
+[*] Quick Draw (requires Master Mischief): Linguist + Ace Driver + Con Artist.
+[*] Assassin (requires Secretive Leader or Quick Draw): License to Kill + Disguise + Cat Burglar.
+[*] Man in Suit (requires Secretive Leader or Quick Draw): Technologist + Rocket Scientist.
+[/list]
+
+Now because Spies need a lot more level, they are available earlier, you gain 1 more Spy slot at Feudalism (and Catherine gain one at Mathematics but NOT at Castle).
+Remember that there are more Spies but also they have more levels so Polygraph and Surveillance are important.
+
+The policy card Non-state Action (select any promotion for Spies) is removed.
+
+This mod works well with my other mod Random Promotions (all other units still get random promotions while Spies get a promotion tree).
+
+Please try this one out and give me feedback, I may need better balancing about the promotions.]]></Description>
+    <Authors>Luke Vo</Authors>
+    <CompatibleVersions>2.0</CompatibleVersions>
+	<Teaser>Spies now have static promotion tree.</Teaser>
+  </Properties>
+  <InGameActions>
+    <UpdateDatabase id="spypromotiontree">
+	  <Properties>
+        <LoadOrder>1000</LoadOrder>
+      </Properties>
+      <File>spypromotiontree.sql</File>
+    </UpdateDatabase>
+	<UpdateText>
+		<File>spypromotiontree_text.sql</File>
+	</UpdateText>
+  </InGameActions>
+  <Files>
+    <File>spypromotiontree.sql</File>
+	<File>spypromotiontree_text.sql</File>
+  </Files>
+</Mod>
