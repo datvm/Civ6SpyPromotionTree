@@ -1,43 +1,88 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Mod id="7fd55004-6f24-4e96-bf17-c5b0977602d6" version="1.0">
+<Mod id="7fd55004-6f24-4e96-bf17-c5b0977602d6" version="1.1">
   <Properties>
     <Name>Spy Promotion Tree</Name>
-    <Description><![CDATA[Spies now have promotion tree instead of picking from random promotions. Spies can now have 7 levels (6 promotions) instead of 4. The promotions are (please check screenshot for details):
+    <Description><![CDATA[Spies now have promotion tree instead of picking from random promotions. Spies can now have 7 levels (6 promotions) instead of 4 and available earlier. Non-state Actor card effect is updated. Please see details below.
+	
+[h1]Promotion Tree [b](NEW UPDATE!)[/b][/h1]
+
+Please check screenshot for details
 
 [list]
-[*] Counter Intelligence: Seduction + Polygraph + Surveillance.
-[*] Master Mischief: Demolitions + Smear Campaign + Satchel Charges.
-[*] Secretive Leader (requires Counter Intelligence): Quarter Master + Guerilla Leader + Covert Action.
-[*] Quick Draw (requires Master Mischief): Linguist + Ace Driver + Con Artist.
-[*] Assassin (requires Secretive Leader or Quick Draw): License to Kill + Disguise + Cat Burglar.
-[*] Man in Suit (requires Secretive Leader or Quick Draw): Technologist + Rocket Scientist.
+[*] Tier 1:
+[list]
+[*] Counter Intelligence: Seduction + Surveillance.
+[*] Master Mischief: Demolitions + Satchel Charges.
 [/list]
+[/list]
+[*] Tier 2:
+[list]
+[*] Deep Network (requires Counter Intelligence): Quarter Master + Polygraph.
+[*] Master Thief (requires Master Mischief): Con Artist + Cat Burglar.
+[/list]
+[*] Tier 3:
+[list]
+[*] Dirty Politics (requires Spy Master or Master Thief): Smear Campaign + Covert Action + Guerilla Leader.
+[/list]
+[*] Tier 4:
+[list]
+[*] Man in Suit (requires Dirty Politics): Linguist + Technologist + Rocket Scientist.
+[*] Master Assassin (requires Dirty Politics): License to Kill + Disguise + Ace Driver.
+[/list]
+[/list]
+
+[h1]Civic changes[/h1]
 
 Now because Spies need a lot more level, they are available earlier, you gain 1 more Spy slot at Feudalism (and Catherine gain one at Mathematics but NOT at Castle).
 Remember that there are more Spies but also they have more levels so Polygraph and Surveillance are important.
 
-The policy card Non-state Action (select any promotion for Spies) is removed.
+[b]NEW UPDATE![/b] The policy card Non-state Action (select any promotion for Spies) is updated to now grant 2 promotions on new Spies (3 for Catherine for her Flying Squadron ability). The card effect applies to all Spies creating while it is active, so do not worry about taking it out if you are not creating more Spies.
 
+[h1]Compatibility & Feedback[/h1]
 This mod works well with my other mod Random Promotions (all other units still get random promotions while Spies get a promotion tree).
 
 Please try this one out and give me feedback, I may need better balancing about the promotions.]]></Description>
     <Authors>Luke Vo</Authors>
     <CompatibleVersions>2.0</CompatibleVersions>
-	<Teaser>Spies now have static promotion tree.</Teaser>
+	<Teaser>Spies now have promotion tree instead of picking from random promotions.</Teaser>
   </Properties>
   <InGameActions>
-    <UpdateDatabase id="spypromotiontree">
+    <UpdateDatabase id="SpyPromotionTree_Db">
 	  <Properties>
         <LoadOrder>1000</LoadOrder>
       </Properties>
       <File>spypromotiontree.sql</File>
     </UpdateDatabase>
-	<UpdateText>
+	<UpdateText id="SpyPromotionTree_Loc">
 		<File>spypromotiontree_text.sql</File>
 	</UpdateText>
+	<AddGameplayScripts id="SpyPromotionTree">
+		<Properties>
+			<LoadOrder>1000</LoadOrder>
+		</Properties>
+		<File>spypromotiontree.lua</File>
+	</AddGameplayScripts>
+	<AddUserInterfaces id="SpyPromotionTree_UI">
+		<Properties>
+			<Context>InGame</Context>
+		</Properties>
+		<Items>
+			<File>spypromotiontreeUI.xml</File>
+		</Items>
+	</AddUserInterfaces>
+	<ImportFiles id="SpyPromotionTree_Import">
+	  <Properties>
+	    <LoadOrder>1000</LoadOrder>
+	  </Properties>
+	  <File>spypromotiontree.lua</File>
+	  <File>spypromotiontreeUI.lua</File>
+	</ImportFiles>
   </InGameActions>
   <Files>
     <File>spypromotiontree.sql</File>
 	<File>spypromotiontree_text.sql</File>
+	<File>spypromotiontree.lua</File>
+	<File>spypromotiontreeUI.lua</File>
+	<File>spypromotiontreeUI.xml</File>
   </Files>
 </Mod>
