@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Mod id="7fd55004-6f24-4e96-bf17-c5b0977602d6" version="1.1">
+<Mod id="7fd55004-6f24-4e96-bf17-c5b0977602d6" version="1.3">
   <Properties>
     <Name>Spy Promotion Tree</Name>
-    <Description><![CDATA[Spies now have promotion tree instead of picking from random promotions. Spies can now have 7 levels (6 promotions) instead of 4 and available earlier. Non-state Actor card effect is updated. Please see details below.
+    <Description><![CDATA[Spies now have promotion tree instead of picking from random promotions. Spies can now have 8 levels (7 promotions) instead of 4 and available earlier. Non-state Actor card effect is updated. Please see details below.
 	
 [h1]Promotion Tree [b](NEW UPDATE!)[/b][/h1]
 
@@ -54,7 +54,10 @@ Please try this one out and give me feedback, I may need better balancing about 
       <File>spypromotiontree.sql</File>
     </UpdateDatabase>
 	<UpdateText id="SpyPromotionTree_Loc">
-		<File>spypromotiontree_text.sql</File>
+	  <Properties>
+        <LoadOrder>125</LoadOrder>
+      </Properties>
+	  <File>spypromotiontree_text.sql</File>
 	</UpdateText>
 	<AddGameplayScripts id="SpyPromotionTree">
 		<Properties>
